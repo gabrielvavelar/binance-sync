@@ -1,3 +1,9 @@
 spring:
   application:
     name: binance-ingestion
+
+    kafka:
+      bootstrap-servers: localhost:9092
+      producer:
+        value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+        acks: 1
